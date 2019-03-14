@@ -1,0 +1,13 @@
+@import '../../styles/var';
+
+.header {
+  padding: 5px 10px;
+  height: 55px;
+  border-bottom: 1px solid $light-grey;
+    h1 {
+      float: left;
+    }
+    &__shoppingCart {
+      float: right;
+    }
+}
