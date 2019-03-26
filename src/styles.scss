@@ -2,7 +2,17 @@
 //$body-bg: blue;
 @import 'styles/main';
 @import 'styles/var';
-//@import 'component/Header/header';
+@import 'styles/helpers';
+@import 'styles/button';
+@import 'component/App';
+@import 'component/Image/image';
+@import 'component/Header/header';
+@import 'component/Product/product';
+@import 'component/ShoppingBag/shoppingBag';
+@import 'component/OrderProducts/orderProduct';
+@import 'component/PromoCode/promotionCode';
+@import 'component/DeliveryMethod/delivery';
+
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';

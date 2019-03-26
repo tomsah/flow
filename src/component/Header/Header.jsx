@@ -1,14 +1,27 @@
-import React from 'react'
+import React, {Component } from 'react'
+import { connect} from 'react-redux'
 import ShoppingCartLogo from '../../images/shoppingCart-icon.svg'
-import './_header.scss'
+import { toggleShoppingBag } from '../../actions/shoppingBagAction'
+import { productsQuantity } from '../../reducer/shoppingBagReducer'
 
-function Header () {
-  return <div className='header'>
-    <h1>Checkout flow</h1>
-    <div className='header__shoppingCart'>
-      <img src={ShoppingCartLogo} alt=""/>
-    </div>
-  </div>
+ class Header extends Component {
+  render() {
+    const { toggleShoppingBag, total } = this.props
+    return (
+      <div className='header'>
+        <h1>Checkout flow</h1>
+        <div className='header__shoppingCart'>
+          <a href="#" onClick={toggleShoppingBag}>
+            <img src={ShoppingCartLogo} alt=""/>
+            <span> {total}</span>
+          </a>
+        </div>
+      </div>
+    )
+  }
 }
+const mapStateToProps = state => ({
+  total: productsQuantity(state)
+})
 
-export default Header
+export default connect( mapStateToProps , {toggleShoppingBag})(Header)

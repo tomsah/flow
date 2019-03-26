@@ -1,4 +1,4 @@
-@import '../component/App';
+//@import '../component/App';
 body {
   margin: 0;
   padding: 0;
@@ -7,9 +7,39 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &.not-scrollable {
+    overflow: hidden;
+  }
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
   monospace;
 }
+
+
+.overlay {
+  &.is-hidden {
+    opacity: 0;
+    height: 0%;
+    transition: opacity .4s,height 0s linear .4s;
+  }
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  opacity: .7;
+  transition: opacity .4s;
+  background-color: #000;
+  display: block;
+  overflow: hidden;
+}
+
+
+
+
+

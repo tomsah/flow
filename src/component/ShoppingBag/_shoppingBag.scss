@@ -1,0 +1,28 @@
+.ShoppingBag{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 55%;
+  z-index: 4;
+  overflow: hidden;
+  background: white;
+  transform: translateX(100%);
+  transition: transform .5s ease; // replace transform by right
+  border-left: 1px solid black;
+  padding: 0 10px;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+&__header {
+  h3 {
+    display: inline-block;
+  }
+  margin-bottom: 20px;
+}
+  &__closeButton {
+    float: right;
+  }
+}

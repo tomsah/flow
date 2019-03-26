@@ -1,0 +1,21 @@
+.orderProduct {
+  padding: 15px 0;
+  border-top: 1px solid #f8f8f8;
+
+  &__description {
+    &__name {
+      p{
+        font-weight: 100;
+        margin-bottom: 10px;
+        letter-spacing: .085em;
+        text-decoration: underline;
+      }
+    }
+
+    &__quantity{
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}
