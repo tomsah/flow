@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     const {toggleShoppingBag} = this.props
     return (
-      <div>
+      <div className='main-wrapper'>
         <div className='main'>
           <Header />
           <ProductsPage />

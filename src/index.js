@@ -1,21 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
-import { createStore,  applyMiddleware } from 'redux'
-import { composeWithDevTools } from 'redux-devtools-extension'
-import thunk from 'redux-thunk'
-import reducer from './reducer'
+import configureStore from './configureStore'
 import { getAllProducts } from './actions'
 
 import './styles.scss';
 import App from './component/App';
 import * as serviceWorker from './serviceWorker';
 
-const store = createStore(
-  reducer,
-  composeWithDevTools(applyMiddleware(thunk)),
-)
-
+const store = configureStore()
 store.dispatch(getAllProducts())
 
 function mainRender() {
