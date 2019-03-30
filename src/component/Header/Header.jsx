@@ -13,7 +13,7 @@ import { productsQuantity } from '../../reducer/shoppingBagReducer'
         <div className='header__shoppingCart'>
           <a href="#" onClick={toggleShoppingBag}>
             <img src={ShoppingCartLogo} alt=""/>
-            <span> {total}</span>
+            <span className='foo'>{total}</span>
           </a>
         </div>
       </div>

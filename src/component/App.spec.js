@@ -1,23 +1,12 @@
 import React from 'react';
-import { mount } from 'enzyme';
 import App from './App';
-import configureStore from '../configureStore'
-import { getAllProducts } from '../actions'
-import { Provider } from 'react-redux'
+import {mountWithStore} from '../test/helpers'
 
 let wrapper
-let store
-
 
 describe('@render App', () => {
   beforeEach(() => {
-    store = configureStore()
-    store.dispatch(getAllProducts())
-    wrapper = mount(
-      <Provider store={store}>
-        <App/>
-      </Provider>
-    )
+    wrapper = mountWithStore(<App/>)
   })
 
   it('should render a main-wrapper div and its child component', () =>{
