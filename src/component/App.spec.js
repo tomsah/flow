@@ -2,11 +2,19 @@ import React from 'react';
 import App from './App';
 import {mountWithStore} from '../test/helpers'
 
-let wrapper
-
 describe('@render App', () => {
+  let wrapper
+  let toggleShoppingBag
+  let getAllProducts
+
   beforeEach(() => {
-    wrapper = mountWithStore(<App/>)
+    toggleShoppingBag = jest.fn()
+    getAllProducts = jest.fn()
+
+    wrapper = mountWithStore(<App.WrappedComponent
+      toggleShoppingBag={toggleShoppingBag}
+      getAllProducts={getAllProducts}
+    />)
   })
 
   it('should render a main-wrapper div and its child component', () =>{
@@ -24,5 +32,17 @@ describe('@render App', () => {
   it('should render the overlay div but not being visible', () => {
     expect(wrapper.find('.overlay').length).toEqual(1)
     expect(wrapper.contains('ShoppingBag')).toBe(false)
+  })
+
+  it('should get all product on componentDidMount', () => {
+    const instance  = wrapper.instance()
+    instance.componentDidMount()
+
+    expect(getAllProducts).toHaveBeenCalledTimes(1)
+  })
+
+  it('should call toggleShoppingBag when click on the overlay', () => {
+    wrapper.find('.overlay').simulate('click')
+    expect(toggleShoppingBag).toHaveBeenCalledTimes(1)
   })
 })

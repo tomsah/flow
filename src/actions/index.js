@@ -8,7 +8,7 @@ const receiveProducts = products => ({
 })
 
 export const getAllProducts = () => dispatch => {
-  shop.getProducts(products => {
+  shop.getProducts().then(products => {
     dispatch(receiveProducts(products))
   })
 }

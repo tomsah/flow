@@ -5,10 +5,7 @@ import { getVisibleProducts } from '../../reducer/products'
 import { addToBag } from '../../actions'
 
 class ProductsPage extends Component {
-  constructor (props) {
-    super(props)
-    this.itemPerRow = 2
-  }
+  itemPerRow = 2
 
   chunkArray = (arr, numOfChunk) => {
     return arr.reduce((acc, curr, index, array) => {

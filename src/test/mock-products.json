@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "name": "Albarracin Holidays",
+    "description": "Have fun and climb hard in best spanish bouldering spot",
+    "img": "albarracin",
+    "price": 500,
+    "inventory": 10
+  },
+  {
+    "id": 2,
+    "name": "Hampi Holidays",
+    "description": "exotic, relax and incredibly beautiful india",
+    "img": "hampi",
+    "price": 450,
+    "inventory": 10
+  },
+  {
+    "id": 3,
+    "name": "Red rock Holidays",
+    "description":
+    "close to Las vegas an incredible world class bouldering spot",
+    "img": "red-rock",
+    "price": 750,
+    "inventory": 10
+  },
+  {
+    "id": 4,
+    "name": "RockLand Holidays",
+    "description": "wild bouldering holidays, all inclusive",
+    "img": "rockland",
+    "price": 800,
+    "inventory": 10
+  }
+]
