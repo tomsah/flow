@@ -16,7 +16,7 @@ const OrderProduct = ({ product, quantity }) =>{
               <p>{product.name}</p>
             </div>
             <div className="orderProduct__description__quantity">
-              <span>quantity:</span>  {quantity}
+              <span>quantity:</span> {quantity}
             </div>
             <div className='orderProduct__description__total-price'>
               <span> {`Total price £${product.price * quantity} `}</span>
